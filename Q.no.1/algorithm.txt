@@ -1,0 +1,11 @@
+ALGORTITHM
+
+1. Start
+
+2. Input principal (P), Time(T), Rate(R)
+
+3. Calculate SI = (P × T × R) / 100
+
+4. Display SI
+
+5. Stop

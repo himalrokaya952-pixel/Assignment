@@ -1,0 +1,10 @@
+IDENTIFY ERROR TYPE
+
+1. If the program compiles but gives wrong roots -> Logical error
+2. If program does not compile -> Syntax error
+3. If crash/divide by zero -> Runtime error
+
+For quadratic equation:
+D = b^2 - 4ac
+
+Common mistake occurs because of wrong discriminant formula.

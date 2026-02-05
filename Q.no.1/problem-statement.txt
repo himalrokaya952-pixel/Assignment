@@ -1,0 +1,13 @@
+Problem Analysis
+
+We need to calculate Simple Interest (SI) using the formula:
+SI = (p*t*r)/100
+
+Where:
+
+P = Principal amount
+T = Time
+R = Rate of interest
+
+Inputs -> P, T, R
+Output -> Simple Interest
