@@ -1,60 +1,37 @@
 #include <stdio.h>
 
-int main()
-{
-    int a[50], n, i, j, temp;
+int main() {
+    int n, i;
     int max, min;
 
-    printf("Enter number of elements: ");
+    //Store n numbers in an array
+    printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    printf("Enter elements:\n");
-    for (i = 0; i < n; i++)
-    {
+    int a[n];
+    printf("Enter %d numbers:\n", n);
+    for(i = 0; i < n; i++) {
         scanf("%d", &a[i]);
     }
 
-    // Find max and min
-    max = min = a[0];
-
-    for (i = 1; i < n; i++)
-    {
-        if (a[i] > max)
-            max = a[i];
-
-        if (a[i] < min)
-            min = a[i];
+    //Find the maximum and minimum
+    max = min = a[0]; // Initialize with the first element
+    for(i = 1; i < n; i++) {
+        if(a[i] > max) max = a[i];
+        if(a[i] < min) min = a[i];
     }
+    printf("\nMaximum value: %d", max);
+    printf("\nMinimum value: %d", min);
 
-    printf("Maximum = %d\n", max);
-    printf("Minimum = %d\n", min);
-
-    // Reverse order
-    printf("Reverse order: ");
-    for (i = n - 1; i >= 0; i--)
-    {
+    //Printing Backwards
+    printf("\nArray in reverse order:\n");
+    for(i = n - 1; i >= 0; i--) {
         printf("%d ", a[i]);
     }
 
-    // Sorting (ascending)
-    for (i = 0; i < n - 1; i++)
-    {
-        for (j = i + 1; j < n; j++)
-        {
-            if (a[i] > a[j])
-            {
-                temp = a[i];
-                a[i] = a[j];
-                a[j] = temp;
-            }
-        }
-    }
-
-    printf("\nSorted array: ");
-    for (i = 0; i < n; i++)
-    {
-        printf("%d ", a[i]);
-    }
+    //Search for a Maximum and Print
+    //Example logic based on prompt [1, 3, 4, 10, 12, 30, 40] -> Largest is 40
+    printf("\nThe largest number found in the array is: %d\n", max);
 
     return 0;
 }
