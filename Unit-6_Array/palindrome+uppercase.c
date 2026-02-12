@@ -3,10 +3,13 @@
 int main()
 {
     char str[100];
-    int i, len, flag = 0;
+    int i, len, flag = 1;
 
     printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
+
+    // REMOVE newline
+    str[strcspn(str, "\n")] = '\0';
 
     len = strlen(str);
 
